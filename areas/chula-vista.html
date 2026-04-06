@@ -23,7 +23,7 @@ h1,h2,h3,h4{font-family:'Rajdhani',sans-serif;font-weight:700;color:#fff}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(41,181,213,.15);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:70px}
-.nav-logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.3rem;color:#29b5d5;letter-spacing:2px}
+.nav-logo{display:flex;align-items:center}.nav-logo img{height:60px;width:auto}
 .nav-links{display:flex;gap:1.8rem;align-items:center}
 .nav-links a{color:#b0b0b0;font-size:.95rem;font-weight:500;transition:color .3s}
 .nav-links a:hover{color:#29b5d5}
@@ -81,7 +81,7 @@ section{padding:80px 2rem}
 /* FOOTER */
 footer{background:rgba(41,181,213,.04);border-top:1px solid rgba(41,181,213,.1);padding:3rem 2rem;text-align:center}
 footer p{color:#b0b0b0;font-size:.9rem;margin-bottom:.5rem}
-footer .nav-logo{font-size:1.1rem;display:inline-block;margin-bottom:.8rem}
+footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -96,7 +96,7 @@ footer .nav-logo{font-size:1.1rem;display:inline-block;margin-bottom:.8rem}
 <body>
 
 <nav>
-  <a href="../index.html" class="nav-logo">SD SHINE LAB</a>
+  <a href="../index.html" class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab – Mobile Auto Detailing"></a>
   <div class="nav-links" id="navLinks">
     <a href="../index.html">Home</a>
     <a href="../index.html#services">Services</a>
@@ -211,7 +211,7 @@ footer .nav-logo{font-size:1.1rem;display:inline-block;margin-bottom:.8rem}
 </section>
 
 <footer>
-  <div class="nav-logo">SD SHINE LAB</div>
+  <div class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab"></div>
   <p>&copy; 2025 SD Shine Lab. All rights reserved.</p>
   <p>Mobile Auto Detailing &bull; Chula Vista, CA 91910</p>
   <p><a href="tel:+18557824886">(855) 782-4886</a></p>

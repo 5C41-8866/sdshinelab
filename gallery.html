@@ -31,8 +31,8 @@ img{max-width:100%;display:block}
 /* ── NAV ── */
 .nav{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(41,181,213,.15);padding:0 clamp(1rem,4vw,3rem)}
 .nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo{font-family:var(--font-brand);font-weight:700;font-size:1.25rem;color:#fff;letter-spacing:2px;white-space:nowrap}
-.nav-logo span{color:var(--cyan)}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:60px;width:auto}
 .nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}
 .nav-links a{font-family:var(--font-body);font-weight:500;font-size:.95rem;color:var(--silver-dim);transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
@@ -114,8 +114,7 @@ section{padding:3rem clamp(1rem,4vw,3rem)}
 /* ── FOOTER ── */
 footer{border-top:1px solid rgba(41,181,213,.12);padding:2.5rem 1.5rem 1.5rem;text-align:center}
 .footer-inner{max-width:1100px;margin:0 auto}
-.footer-logo{font-family:var(--font-brand);font-weight:700;font-size:1.1rem;color:#fff;letter-spacing:2px;margin-bottom:.5rem}
-.footer-logo span{color:var(--cyan)}
+.footer-logo img{height:45px;width:auto;margin-bottom:.5rem}
 footer p{color:var(--silver-dim);font-size:.85rem;margin-top:.3rem}
 footer a{color:var(--cyan)}
 </style>
@@ -125,7 +124,7 @@ footer a{color:var(--cyan)}
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">SD <span>SHINE</span> LAB</a>
+    <a href="index.html" class="nav-logo"><img src="gallery-imgs/logo.jpg" alt="SD Shine Lab – Mobile Auto Detailing"></a>
     <button class="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -270,7 +269,7 @@ footer a{color:var(--cyan)}
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">SD <span>SHINE</span> LAB</div>
+    <div class="footer-logo"><img src="gallery-imgs/logo.jpg" alt="SD Shine Lab"></div>
     <p>Mobile Auto Detailing &bull; San Diego, CA</p>
     <p><a href="tel:+18557824886">(855) 782-4886</a> &bull; <a href="https://pocketsuite.io/link/sdshinelab">Book Online</a></p>
     <p style="margin-top:.8rem;font-size:.75rem;color:#666">&copy; 2025 SD Shine Lab. All rights reserved.</p>
