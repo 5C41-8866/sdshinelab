@@ -222,29 +222,21 @@
     .sparkle:nth-child(14) { left: 45%; top: 40%; animation-duration: 4.4s; animation-delay: 2.5s; width: 3px; height: 3px; }
     .sparkle:nth-child(15) { left: 75%; top: 35%; animation-duration: 5s; animation-delay: 0.9s; }
 
-    /* SVG Car animation */
-    .hero-car {
+    /* Hero logo image */
+    .hero-logo {
       position: absolute;
-      bottom: 10%;
+      bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
-      width: 700px;
-      max-width: 90vw;
-      opacity: 0.2;
+      width: 500px;
+      max-width: 80vw;
+      opacity: 0;
       pointer-events: none;
+      animation: fade-in-logo 2s ease forwards 0.3s;
     }
 
-    .hero-car path {
-      fill: none;
-      stroke: #29b5d5;
-      stroke-width: 2;
-      stroke-dasharray: 2000;
-      stroke-dashoffset: 2000;
-      animation: draw-car 3s ease forwards 0.5s;
-    }
-
-    @keyframes draw-car {
-      to { stroke-dashoffset: 0; }
+    @keyframes fade-in-logo {
+      to { opacity: 0.35; }
     }
 
     .hero-content {
@@ -795,10 +787,8 @@
       <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
     </div>
 
-    <!-- Animated SVG Car Silhouette -->
-    <svg class="hero-car" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 60,200 Q 40,200 35,190 L 30,175 Q 28,168 35,165 L 120,155 L 180,150 Q 200,120 230,95 Q 260,70 310,55 L 420,45 Q 480,42 530,48 L 590,60 Q 630,70 660,90 Q 680,105 695,130 L 720,150 L 760,155 Q 772,158 775,168 L 775,185 Q 775,195 765,200 L 720,205 Q 710,205 700,200 Q 680,180 650,180 Q 620,180 600,200 Q 595,205 585,205 L 230,205 Q 220,205 215,200 Q 195,180 165,180 Q 135,180 115,200 Q 110,205 100,205 Z M 165,170 Q 195,170 210,190 Q 215,198 210,205 Q 195,225 165,225 Q 135,225 120,205 Q 115,198 120,190 Q 135,170 165,170 Z M 650,170 Q 680,170 695,190 Q 700,198 695,205 Q 680,225 650,225 Q 620,225 605,205 Q 600,198 605,190 Q 620,170 650,170 Z M 230,90 Q 255,72 290,60 L 400,50 L 400,140 L 220,148 Z M 420,48 L 540,56 Q 580,65 610,82 Q 640,100 660,130 L 680,148 L 400,140 L 400,48 Z" />
-    </svg>
+    <!-- Hero Logo Image -->
+    <img src="gallery-imgs/logo.jpg" alt="" class="hero-logo" aria-hidden="true">
 
     <div class="hero-content">
       <h1>Mobile Auto Detailing <span>That Comes to You</span></h1>
