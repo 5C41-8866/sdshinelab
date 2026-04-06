@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SD Shine Lab | Mobile Auto Detailing in Chula Vista & San Diego County</title>
+  <meta name="description" content="Professional mobile auto detailing in Chula Vista & San Diego County. Hand wash, interior detail, and premium packages delivered to your door. Book online today.">
+  <meta name="keywords" content="mobile auto detailing, car detailing Chula Vista, San Diego car wash, hand wash, interior detail, mobile car wash">
+  <link rel="canonical" href="https://sdshinelab.com/">
+  <meta property="og:title" content="SD Shine Lab | Mobile Auto Detailing">
+  <meta property="og:description" content="Professional mobile auto detailing delivered to your door in Chula Vista & San Diego County. Hand wash & interior detail.">
+  <meta property="og:url" content="https://sdshinelab.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sdshinelab.com/gallery-imgs/logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SD Shine Lab | Mobile Auto Detailing">
+  <meta name="twitter:description" content="Professional mobile auto detailing delivered to your door in Chula Vista & San Diego County.">
+  <link rel="icon" href="gallery-imgs/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background: #000;
+      color: #e0e0e0;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ========== NAV ========== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(41,181,213,0.15);
+      transition: background 0.3s;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .nav-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: #29b5d5;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #b0b0b0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: #29b5d5; }
+
+    .nav-cta {
+      background: #29b5d5;
+      color: #000 !important;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-weight: 700 !important;
+      letter-spacing: 1px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #1e9bba;
+      transform: translateY(-1px);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: #e0e0e0;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(0,0,0,0.97);
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+        transition: right 0.35s ease;
+        border-left: 1px solid rgba(41,181,213,0.2);
+      }
+
+      .nav-links.open { right: 0; }
+
+      .nav-links a { font-size: 1.1rem; }
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 60px;
+      overflow: hidden;
+    }
+
+    /* Sparkles / particles */
+    .sparkle-container {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #29b5d5;
+      border-radius: 50%;
+      animation: sparkle-float linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes sparkle-float {
+      0% { opacity: 0; transform: translateY(0) scale(0); }
+      20% { opacity: 1; transform: translateY(-20px) scale(1); }
+      80% { opacity: 0.6; }
+      100% { opacity: 0; transform: translateY(-120px) scale(0.3); }
+    }
+
+    .sparkle:nth-child(1) { left: 10%; top: 80%; animation-duration: 4s; animation-delay: 0s; }
+    .sparkle:nth-child(2) { left: 25%; top: 70%; animation-duration: 3.5s; animation-delay: 0.5s; width: 3px; height: 3px; }
+    .sparkle:nth-child(3) { left: 40%; top: 85%; animation-duration: 5s; animation-delay: 1s; }
+    .sparkle:nth-child(4) { left: 55%; top: 75%; animation-duration: 4.5s; animation-delay: 1.5s; width: 3px; height: 3px; }
+    .sparkle:nth-child(5) { left: 70%; top: 80%; animation-duration: 3.8s; animation-delay: 0.3s; }
+    .sparkle:nth-child(6) { left: 85%; top: 72%; animation-duration: 4.2s; animation-delay: 2s; width: 2px; height: 2px; }
+    .sparkle:nth-child(7) { left: 15%; top: 60%; animation-duration: 5.5s; animation-delay: 0.8s; }
+    .sparkle:nth-child(8) { left: 50%; top: 65%; animation-duration: 3.2s; animation-delay: 1.2s; width: 3px; height: 3px; }
+    .sparkle:nth-child(9) { left: 80%; top: 55%; animation-duration: 4.8s; animation-delay: 0.6s; }
+    .sparkle:nth-child(10) { left: 35%; top: 50%; animation-duration: 3.6s; animation-delay: 2.2s; }
+    .sparkle:nth-child(11) { left: 60%; top: 90%; animation-duration: 4.1s; animation-delay: 1.8s; width: 2px; height: 2px; }
+    .sparkle:nth-child(12) { left: 90%; top: 85%; animation-duration: 5.2s; animation-delay: 0.4s; }
+    .sparkle:nth-child(13) { left: 5%; top: 45%; animation-duration: 3.9s; animation-delay: 1.6s; }
+    .sparkle:nth-child(14) { left: 45%; top: 40%; animation-duration: 4.4s; animation-delay: 2.5s; width: 3px; height: 3px; }
+    .sparkle:nth-child(15) { left: 75%; top: 35%; animation-duration: 5s; animation-delay: 0.9s; }
+
+    /* SVG Car animation */
+    .hero-car {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      max-width: 90vw;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .hero-car path {
+      fill: none;
+      stroke: #29b5d5;
+      stroke-width: 2;
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: draw-car 3s ease forwards 0.5s;
+    }
+
+    @keyframes draw-car {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      color: #fff;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 span { color: #29b5d5; }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #b0b0b0;
+      margin-bottom: 36px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: #29b5d5;
+      color: #000;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 36px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: background 0.3s, transform 0.2s;
+      border: 2px solid #29b5d5;
+    }
+
+    .btn-primary:hover {
+      background: #1e9bba;
+      border-color: #1e9bba;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #29b5d5;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 36px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border: 2px solid #29b5d5;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(41,181,213,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ========== TRUST BAR ========== */
+    .trust-bar {
+      background: linear-gradient(135deg, rgba(41,181,213,0.08), rgba(41,181,213,0.03));
+      border-top: 1px solid rgba(41,181,213,0.15);
+      border-bottom: 1px solid rgba(41,181,213,0.15);
+      padding: 28px 20px;
+    }
+
+    .trust-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #e0e0e0;
+      letter-spacing: 0.5px;
+    }
+
+    .trust-item svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    /* ========== SECTIONS SHARED ========== */
+    .section {
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #b0b0b0;
+      font-size: 1.05rem;
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== SERVICES ========== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr; max-width: 450px; }
+    }
+
+    .service-card {
+      background: linear-gradient(180deg, rgba(41,181,213,0.06) 0%, rgba(0,0,0,0.4) 100%);
+      border: 1px solid rgba(41,181,213,0.15);
+      border-radius: 8px;
+      padding: 36px 28px 28px;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(41,181,213,0.4);
+      transform: translateY(-4px);
+    }
+
+    .service-card.popular {
+      border-color: #29b5d5;
+      box-shadow: 0 0 30px rgba(41,181,213,0.12);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #29b5d5;
+      color: #000;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 18px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .service-price {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #29b5d5;
+      margin-bottom: 4px;
+    }
+
+    .service-duration {
+      font-size: 0.85rem;
+      color: #808080;
+      margin-bottom: 20px;
+    }
+
+    .service-list {
+      margin-bottom: 24px;
+    }
+
+    .service-list li {
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+      font-size: 0.95rem;
+      color: #b0b0b0;
+    }
+
+    .service-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #29b5d5;
+    }
+
+    .service-card .btn-primary {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      font-size: 0.95rem;
+    }
+
+    /* ========== EXTRAS ========== */
+    .extras-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .extras-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .extras-grid { grid-template-columns: 1fr; max-width: 320px; }
+    }
+
+    .extra-item {
+      background: rgba(41,181,213,0.05);
+      border: 1px solid rgba(41,181,213,0.12);
+      border-radius: 8px;
+      padding: 24px 16px;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .extra-item:hover {
+      border-color: rgba(41,181,213,0.35);
+    }
+
+    .extra-item h4 {
+      font-size: 1rem;
+      color: #e0e0e0;
+      margin-bottom: 6px;
+    }
+
+    .extra-item .extra-price {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #29b5d5;
+    }
+
+    /* ========== WHY CHOOSE US ========== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .why-grid { grid-template-columns: 1fr; max-width: 320px; }
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 32px 20px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(41,181,213,0.1);
+      border-radius: 8px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .why-item:hover {
+      border-color: rgba(41,181,213,0.3);
+      transform: translateY(-3px);
+    }
+
+    .why-item svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+    }
+
+    .why-item h4 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .why-item p {
+      font-size: 0.9rem;
+      color: #808080;
+    }
+
+    /* ========== AREAS ========== */
+    .areas-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .areas-list a {
+      display: inline-block;
+      background: rgba(41,181,213,0.08);
+      border: 1px solid rgba(41,181,213,0.2);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #29b5d5;
+      letter-spacing: 0.5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .areas-list a:hover {
+      background: rgba(41,181,213,0.18);
+      transform: translateY(-2px);
+    }
+
+    .areas-note {
+      text-align: center;
+      color: #808080;
+      font-size: 0.95rem;
+      margin-top: 16px;
+    }
+
+    /* ========== REVIEWS ========== */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      .reviews-grid { grid-template-columns: 1fr; max-width: 480px; }
+    }
+
+    .review-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: border-color 0.3s;
+    }
+
+    .review-card:hover {
+      border-color: rgba(41,181,213,0.25);
+    }
+
+    .review-stars {
+      color: #f5c518;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      color: #b0b0b0;
+      margin-bottom: 14px;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    .review-author {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #e0e0e0;
+    }
+
+    .review-source {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* ========== CTA BAND ========== */
+    .cta-band {
+      background: linear-gradient(135deg, #29b5d5 0%, #1a8ba3 100%);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .cta-band p {
+      color: rgba(0,0,0,0.65);
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+    }
+
+    .cta-band .btn-dark {
+      display: inline-block;
+      background: #000;
+      color: #29b5d5;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 40px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: background 0.3s, transform 0.2s;
+      margin-right: 16px;
+    }
+
+    .cta-band .btn-dark:hover {
+      background: #111;
+      transform: translateY(-2px);
+    }
+
+    .cta-band .cta-phone {
+      display: inline-block;
+      color: #000;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: #0a0a0a;
+      border-top: 1px solid rgba(41,181,213,0.1);
+      padding: 60px 20px 30px;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-inner { grid-template-columns: 1fr; text-align: center; }
+    }
+
+    .footer h4 {
+      font-size: 1rem;
+      color: #29b5d5;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+
+    .footer p, .footer a {
+      font-size: 0.9rem;
+      color: #808080;
+      line-height: 1.8;
+    }
+
+    .footer a:hover { color: #29b5d5; }
+
+    .footer-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: #29b5d5;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    /* ========== UTILITY ========== */
+    @media (max-width: 480px) {
+      .section { padding: 60px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">SD SHINE LAB</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#areas">Areas</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="https://pocketsuite.io/link/sdshinelab" class="nav-cta" target="_blank" rel="noopener">Book Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="sparkle-container">
+      <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+      <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+      <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+      <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+      <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+    </div>
+
+    <!-- Animated SVG Car Silhouette -->
+    <svg class="hero-car" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 60,200 Q 40,200 35,190 L 30,175 Q 28,168 35,165 L 120,155 L 180,150 Q 200,120 230,95 Q 260,70 310,55 L 420,45 Q 480,42 530,48 L 590,60 Q 630,70 660,90 Q 680,105 695,130 L 720,150 L 760,155 Q 772,158 775,168 L 775,185 Q 775,195 765,200 L 720,205 Q 710,205 700,200 Q 680,180 650,180 Q 620,180 600,200 Q 595,205 585,205 L 230,205 Q 220,205 215,200 Q 195,180 165,180 Q 135,180 115,200 Q 110,205 100,205 Z M 165,170 Q 195,170 210,190 Q 215,198 210,205 Q 195,225 165,225 Q 135,225 120,205 Q 115,198 120,190 Q 135,170 165,170 Z M 650,170 Q 680,170 695,190 Q 700,198 695,205 Q 680,225 650,225 Q 620,225 605,205 Q 600,198 605,190 Q 620,170 650,170 Z M 230,90 Q 255,72 290,60 L 400,50 L 400,140 L 220,148 Z M 420,48 L 540,56 Q 580,65 610,82 Q 640,100 660,130 L 680,148 L 400,140 L 400,48 Z" />
+    </svg>
+
+    <div class="hero-content">
+      <h1>Mobile Auto Detailing <span>That Comes to You</span></h1>
+      <p>Professional hand wash &amp; interior detail &mdash; at your door in Chula Vista &amp; San Diego County</p>
+      <div class="hero-btns">
+        <a href="https://pocketsuite.io/link/sdshinelab" class="btn-primary" target="_blank" rel="noopener">Book Now</a>
+        <a href="tel:+18557824886" class="btn-outline">Call (855) 782-4886</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BAR ==================== -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f5c518" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>5.0 Google Rating</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#29b5d5" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>21+ Five-Star Reviews</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#29b5d5" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>100% Mobile Service</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#29b5d5" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M7 12.5l3 3 7-7"/></svg>
+        <span>Eco-Friendly Products</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Choose the package that fits your vehicle's needs. We bring the shine to you.</p>
+
+      <div class="services-grid">
+        <!-- Exterior Only -->
+        <div class="service-card">
+          <h3>Exterior Only</h3>
+          <div class="service-price">Sedan $70 &nbsp;/&nbsp; SUV-Truck $90</div>
+          <div class="service-duration">Approx. 1 hour</div>
+          <ul class="service-list">
+            <li>Exterior hand wash</li>
+            <li>Wheel &amp; tire clean + shine</li>
+          </ul>
+          <a href="https://pocketsuite.io/link/sdshinelab" class="btn-primary" target="_blank" rel="noopener">Book Now</a>
+        </div>
+
+        <!-- Express Shine -->
+        <div class="service-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Express Shine</h3>
+          <div class="service-price">Sedan $100 &nbsp;/&nbsp; SUV-Truck $120</div>
+          <div class="service-duration">1.5 &ndash; 2 hours</div>
+          <ul class="service-list">
+            <li>Exterior hand wash</li>
+            <li>Wheel &amp; tire clean + shine</li>
+            <li>Interior vacuum</li>
+            <li>Interior surface wipe down</li>
+            <li>Streak-free windows</li>
+          </ul>
+          <a href="https://pocketsuite.io/link/sdshinelab" class="btn-primary" target="_blank" rel="noopener">Book Now</a>
+        </div>
+
+        <!-- Premium Shine -->
+        <div class="service-card">
+          <h3>Premium Shine</h3>
+          <div class="service-price">Sedan $130 &nbsp;/&nbsp; SUV-Truck $150</div>
+          <div class="service-duration">2.5 &ndash; 3 hours</div>
+          <ul class="service-list">
+            <li>Everything in Express Shine</li>
+            <li>Carpet and seat treatment</li>
+            <li>Stain removal</li>
+            <li>Deep interior surface wipe down</li>
+            <li>Odor neutralizer</li>
+            <li>Like-new finish</li>
+          </ul>
+          <a href="https://pocketsuite.io/link/sdshinelab" class="btn-primary" target="_blank" rel="noopener">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXTRAS / ADD-ONS ==================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title">Add-Ons</h2>
+      <p class="section-subtitle">Customize your detail with these extras.</p>
+
+      <div class="extras-grid">
+        <div class="extra-item">
+          <h4>Pet Hair &amp; Stains</h4>
+          <div class="extra-price">+$30</div>
+        </div>
+        <div class="extra-item">
+          <h4>Headlight Restoration</h4>
+          <div class="extra-price">+$35</div>
+        </div>
+        <div class="extra-item">
+          <h4>Engine Bay Cleaning</h4>
+          <div class="extra-price">+$50</div>
+        </div>
+        <div class="extra-item">
+          <h4>Travel Fee (20-30 mi)</h4>
+          <div class="extra-price">+$20</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US ==================== -->
+  <section class="section" style="background: rgba(41,181,213,0.02);">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">Premium detailing, done right, delivered to your door.</p>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4C16.27 4 10 10.27 10 18c0 11 14 26 14 26s14-15 14-26c0-7.73-6.27-14-14-14z" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
+            <circle cx="24" cy="18" r="5" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
+          </svg>
+          <h4>We Come to You</h4>
+          <p>100% mobile service at your home, office, or anywhere.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 44c-1-2-4-5-8-8-5-4-10-8-10-16a14 14 0 0 1 18-13.4" stroke="#29b5d5" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M36 8c-2 0-4 1-5 3-1 2-1 4 0 6l5 7 5-7c1-2 1-4 0-6-1-2-3-3-5-3z" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
+            <path d="M14 22c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z" stroke="#29b5d5" stroke-width="2" fill="none"/>
+            <path d="M14 30v4M10 32h8" stroke="#29b5d5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h4>Hand Wash Only</h4>
+          <p>Gentle, meticulous hand washing for a scratch-free shine.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6c-1 0-2 1-2 2v2c-6 1-10 6-10 12v4l-2 8h28l-2-8v-4c0-6-4-11-10-12V8c0-1-1-2-2-2z" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
+            <path d="M18 36c0 3 3 6 6 6s6-3 6-6" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
+            <path d="M24 6c-4 0-7 2-7 2M31 8s-3-2-7-2" stroke="#29b5d5" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <ellipse cx="24" cy="20" rx="6" ry="4" stroke="#29b5d5" stroke-width="1.5" fill="none"/>
+          </svg>
+          <h4>Eco-Friendly Products</h4>
+          <p>Safe for your car and the environment.</p>
+        </div>
+        <div class="why-item">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L6 14v12c0 10 8 18 18 20 10-2 18-10 18-20V14L24 4z" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
+            <path d="M16 24l5 5 11-11" stroke="#29b5d5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4>Satisfaction Guaranteed</h4>
+          <p>We don't leave until your car looks its best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE AREAS ==================== -->
+  <section class="section" id="areas">
+    <div class="container">
+      <h2 class="section-title">Service Areas</h2>
+      <p class="section-subtitle">We proudly serve South San Diego County and beyond.</p>
+
+      <div class="areas-list">
+        <a href="areas/chula-vista.html">Chula Vista</a>
+        <a href="areas/national-city.html">National City</a>
+        <a href="areas/bonita.html">Bonita</a>
+        <a href="areas/eastlake.html">Eastlake</a>
+        <a href="areas/san-diego.html">San Diego</a>
+      </div>
+      <p class="areas-note">Don't see your area? <a href="tel:+18557824886" style="color:#29b5d5;">Call us</a> &mdash; we may still be able to come to you.</p>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="section" id="reviews" style="background: rgba(41,181,213,0.02);">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Rated 5.0 stars on Google with 21+ reviews.</p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">They came right to my driveway and my car looked brand new when they were done. The interior was spotless and smelled amazing. Definitely booking again!</p>
+          <div class="review-author">Carlos M.</div>
+          <div class="review-source">Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">Best mobile detailing I've ever had. Super professional, on time, and my SUV has never looked this clean. The attention to detail is incredible.</p>
+          <div class="review-author">Jessica R.</div>
+          <div class="review-source">Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">I have two dogs and my car was a mess. They got every single pet hair out and removed stains I thought were permanent. Worth every penny.</p>
+          <div class="review-author">David L.</div>
+          <div class="review-source">Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">So convenient not having to drive anywhere. They did an amazing job on my sedan. The wheels and tires looked showroom fresh. Highly recommend SD Shine Lab!</p>
+          <div class="review-author">Maria T.</div>
+          <div class="review-source">Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BAND ==================== -->
+  <section class="cta-band">
+    <h2>Ready for a Showroom Shine?</h2>
+    <p>Book your mobile detail today and see the difference.</p>
+    <div>
+      <a href="https://pocketsuite.io/link/sdshinelab" class="btn-dark" target="_blank" rel="noopener">Book Now</a>
+      <a href="tel:+18557824886" class="cta-phone">(855) 782-4886</a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">SD SHINE LAB</div>
+        <p>Professional mobile auto detailing serving Chula Vista and San Diego County.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>
+          <a href="tel:+18557824886">(855) 782-4886</a><br>
+          Chula Vista, CA 91910<br><br>
+          <a href="https://pocketsuite.io/link/sdshinelab" target="_blank" rel="noopener" style="color:#29b5d5;">Book Online &rarr;</a>
+        </p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>
+          Mon &ndash; Sat: 8:00 AM &ndash; 6:00 PM<br>
+          Sun: By Appointment
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 SD Shine Lab. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ==================== JSON-LD SCHEMA ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SD Shine Lab",
+    "description": "Professional mobile auto detailing in Chula Vista and San Diego County. Hand wash, interior detail, and premium packages delivered to your door.",
+    "url": "https://sdshinelab.com/",
+    "telephone": "+18557824886",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chula Vista",
+      "addressRegion": "CA",
+      "postalCode": "91910",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.6401,
+      "longitude": -117.0842
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "21",
+      "bestRating": "5"
+    },
+    "priceRange": "$70-$150",
+    "image": "https://sdshinelab.com/gallery-imgs/logo.jpg",
+    "areaServed": [
+      {"@type":"City","name":"Chula Vista"},
+      {"@type":"City","name":"National City"},
+      {"@type":"City","name":"Bonita"},
+      {"@type":"City","name":"Eastlake"},
+      {"@type":"City","name":"San Diego"}
+    ],
+    "serviceType": "Mobile Auto Detailing"
+  }
+  </script>
+
+  <!-- ==================== JS ==================== -->
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      this.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+    });
+
+    // Close menu on link click (mobile)
+    navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Raw source images (originals kept in OneDrive)
+*.heic
+*.png
+*.jpeg
+CLAUDE_2.md
+.DS_Store
