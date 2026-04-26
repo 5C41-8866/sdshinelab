@@ -4,3 +4,5 @@
 *.jpeg
 CLAUDE_2.md
 .DS_Store
+.vercel
+.claude/

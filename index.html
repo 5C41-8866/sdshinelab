@@ -12,13 +12,13 @@
   <meta name="geo.position" content="32.6401;-117.0842">
   <link rel="canonical" href="https://sdshinelab.com">
   <meta property="og:title" content="SD Shine Lab | Mobile Auto Detailing Chula Vista & San Diego">
-  <meta property="og:description" content="5.0★ rated mobile auto detailing in Chula Vista, CA. We come to you — home, office, anywhere in San Diego County. Book online today.">
+  <meta property="og:description" content="4.9★ rated mobile auto detailing in Chula Vista, CA. We come to you — home, office, anywhere in San Diego County. Book online today.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sdshinelab.com">
   <meta property="og:image" content="https://sdshinelab.com/gallery-imgs/logo.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SD Shine Lab | Mobile Auto Detailing Chula Vista & San Diego">
-  <meta name="twitter:description" content="5.0★ rated mobile auto detailing in Chula Vista, CA. We come to you — home, office, anywhere in San Diego County.">
+  <meta name="twitter:description" content="4.9★ rated mobile auto detailing in Chula Vista, CA. We come to you — home, office, anywhere in San Diego County.">
   <link rel="icon" href="gallery-imgs/logo.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,6 +179,8 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
       padding: 120px 20px 60px;
       overflow: hidden;
       background:
@@ -200,12 +202,13 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 600px;
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .hero h1 {
       font-family: 'Rajdhani', sans-serif;
-      font-size: clamp(56px, 9vw, 100px);
+      font-size: clamp(48px, 8vw, 88px);
       font-weight: 700;
       color: #fff;
       line-height: 0.95;
@@ -218,8 +221,8 @@
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
       color: #b0b0b0;
-      margin-bottom: 36px;
-      max-width: 480px;
+      margin: 0 auto 36px;
+      max-width: 540px;
       line-height: 1.6;
     }
 
@@ -227,6 +230,7 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-stats {
@@ -236,6 +240,7 @@
       padding-top: 32px;
       border-top: 1px solid rgba(255,255,255,0.08);
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-stat strong {
@@ -255,27 +260,141 @@
 
     .hero-stat .cyan { color: #29b5d5; }
 
-    .hero-car {
-      position: absolute;
-      right: 0;
-      bottom: 50%;
-      transform: translateY(50%);
-      width: 48%;
-      max-width: 580px;
-      pointer-events: none;
-      opacity: 0.4;
-      animation: carFloat 7s ease-in-out infinite;
-    }
+    .hero-car { display: none; }
 
-    .hero-car img {
+    /* ----- Hero Showcase Image ----- */
+    .hero-showcase {
+      position: relative;
       width: 100%;
-      height: auto;
+      max-width: 760px;
+      aspect-ratio: 16 / 10;
+      margin: 40px auto 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(41,181,213,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(41,181,213,0.08) inset;
+    }
+    .hero-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    @keyframes carFloat {
-      0%, 100% { transform: translateY(50%); }
-      50% { transform: translateY(calc(50% - 10px)); }
+    /* ----- Proof Section (Before / After) ----- */
+    .proof {
+      padding: 80px 20px 40px;
+      text-align: center;
     }
+    .proof-eyebrow {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #29b5d5;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .proof-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .proof-sub {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      color: #b0b0b0;
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    /* ----- Before / After Slider ----- */
+    .before-after {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      aspect-ratio: 16 / 10;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(41,181,213,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(41,181,213,0.08) inset;
+      user-select: none;
+      touch-action: none;
+      cursor: ew-resize;
+      --pos: 50%;
+      outline: none;
+    }
+    .before-after:focus-visible {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 3px rgba(41,181,213,0.6);
+    }
+    .ba-after, .ba-before {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      display: block;
+    }
+    .ba-before {
+      clip-path: inset(0 0 0 var(--pos));
+    }
+    .ba-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--pos);
+      width: 3px;
+      background: #29b5d5;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .ba-handle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #29b5d5;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.4), 0 4px 14px rgba(0,0,0,0.6);
+    }
+    .ba-arrows {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #000;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0;
+      white-space: nowrap;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .ba-label {
+      position: absolute;
+      top: 16px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+      background: rgba(0,0,0,0.65);
+      padding: 6px 12px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+    .ba-label-before { left: 16px; }
+    .ba-label-after { right: 16px; }
 
     @media (max-width: 768px) {
       .hero { text-align: center; justify-content: center; }
@@ -796,21 +915,45 @@
   <!-- ==================== HERO ==================== -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Your Car.<br><span>Our</span> Lab.</h1>
+      <h1>Precision Detailing.<br><span>Elevated.</span></h1>
       <p>Professional mobile auto detailing &mdash; we bring the detail shop to your home or office. Precision results, every time.</p>
       <div class="hero-btns">
         <a href="https://pocketsuite.io/link/sdshinelab" class="btn-primary" target="_blank" rel="noopener">Book Your Detail &rarr;</a>
         <a href="#services" class="btn-outline">View Services</a>
       </div>
+
+      <div class="hero-showcase">
+        <img src="gallery-imgs/porsche-hero.jpg"
+             alt="Porsche detailed by SD Shine Lab — mirror finish, mobile detailing in San Diego County"
+             loading="eager" fetchpriority="high" decoding="async">
+      </div>
+
       <div class="hero-stats">
         <div class="hero-stat"><strong>200+</strong><span>Cars Detailed</span></div>
-        <div class="hero-stat"><strong>5.0<span class="cyan">&#9733;</span> 21</strong><span>Google Reviews</span></div>
+        <div class="hero-stat"><strong>4.9<span class="cyan">&#9733;</span></strong><span>Google Rated</span></div>
         <div class="hero-stat"><strong>10+</strong><span>Cities Served</span></div>
       </div>
     </div>
+  </section>
 
-    <div class="hero-car">
-      <img src="gallery-imgs/logo.jpg" alt="" aria-hidden="true">
+  <!-- ==================== PROOF (Before / After) ==================== -->
+  <section class="proof" id="proof">
+    <div class="proof-eyebrow">See the Difference</div>
+    <h2 class="proof-title">Real Results. Drag to Reveal.</h2>
+    <p class="proof-sub">Same floor. Same angle. One deep clean later.</p>
+
+    <div class="before-after" id="beforeAfter" role="slider" tabindex="0"
+         aria-label="Drag or use arrow keys to compare before and after vehicle floor detailing"
+         aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <img class="ba-after"  src="gallery-imgs/vehicle-floor-after.jpg"
+           alt="Vehicle floor and carpet clean after deep detail by SD Shine Lab"
+           decoding="async">
+      <img class="ba-before" src="gallery-imgs/vehicle-floor-before.jpg"
+           alt="Vehicle floor and carpet dirty before deep clean"
+           decoding="async">
+      <div class="ba-handle"><span class="ba-arrows">&lsaquo; &rsaquo;</span></div>
+      <span class="ba-label ba-label-before">BEFORE</span>
+      <span class="ba-label ba-label-after">AFTER</span>
     </div>
   </section>
 
@@ -948,16 +1091,6 @@
         </div>
         <div class="why-item">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 6c-1 0-2 1-2 2v2c-6 1-10 6-10 12v4l-2 8h28l-2-8v-4c0-6-4-11-10-12V8c0-1-1-2-2-2z" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
-            <path d="M18 36c0 3 3 6 6 6s6-3 6-6" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
-            <path d="M24 6c-4 0-7 2-7 2M31 8s-3-2-7-2" stroke="#29b5d5" stroke-width="1.5" fill="none" opacity="0.5"/>
-            <ellipse cx="24" cy="20" rx="6" ry="4" stroke="#29b5d5" stroke-width="1.5" fill="none"/>
-          </svg>
-          <h4>Eco-Friendly Products</h4>
-          <p>Safe for your car and the environment.</p>
-        </div>
-        <div class="why-item">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 4L6 14v12c0 10 8 18 18 20 10-2 18-10 18-20V14L24 4z" stroke="#29b5d5" stroke-width="2.5" fill="none"/>
             <path d="M16 24l5 5 11-11" stroke="#29b5d5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -989,7 +1122,7 @@
   <section class="section" id="reviews" style="background: rgba(41,181,213,0.02);">
     <div class="container">
       <h2 class="section-title">What Our Customers Say</h2>
-      <p class="section-subtitle">Rated 5.0 stars on Google with 21+ reviews.</p>
+      <p class="section-subtitle">Rated 4.9&#9733; on Google.</p>
 
       <div class="reviews-grid">
         <div class="review-card">
@@ -1095,8 +1228,8 @@
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "21",
+      "ratingValue": "4.9",
+      "reviewCount": "25",
       "bestRating": "5"
     },
     "priceRange": "$70-$150",
@@ -1141,6 +1274,50 @@
         hamburger.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // Before/After slider
+    (function() {
+      var ba = document.getElementById('beforeAfter');
+      if (!ba) return;
+      var dragging = false;
+
+      function setPos(clientX) {
+        var rect = ba.getBoundingClientRect();
+        var pct = ((clientX - rect.left) / rect.width) * 100;
+        if (pct < 0) pct = 0;
+        if (pct > 100) pct = 100;
+        ba.style.setProperty('--pos', pct + '%');
+        ba.setAttribute('aria-valuenow', Math.round(pct));
+      }
+
+      ba.addEventListener('pointerdown', function(e) {
+        dragging = true;
+        ba.setPointerCapture(e.pointerId);
+        setPos(e.clientX);
+      });
+      ba.addEventListener('pointermove', function(e) {
+        if (!dragging) return;
+        setPos(e.clientX);
+      });
+      ba.addEventListener('pointerup', function(e) {
+        dragging = false;
+        try { ba.releasePointerCapture(e.pointerId); } catch (err) {}
+      });
+      ba.addEventListener('pointercancel', function() { dragging = false; });
+
+      ba.addEventListener('keydown', function(e) {
+        var cur = parseFloat(ba.getAttribute('aria-valuenow') || '50');
+        var next = cur;
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') next = Math.max(0, cur - 5);
+        else if (e.key === 'ArrowRight' || e.key === 'ArrowUp') next = Math.min(100, cur + 5);
+        else if (e.key === 'Home') next = 0;
+        else if (e.key === 'End') next = 100;
+        else return;
+        e.preventDefault();
+        ba.style.setProperty('--pos', next + '%');
+        ba.setAttribute('aria-valuenow', next);
+      });
+    })();
   </script>
 </body>
 </html>
