@@ -6,3 +6,7 @@ CLAUDE_2.md
 .DS_Store
 .vercel
 .claude/
+
+# Allow favicon assets despite *.png exclude
+!favicon-*.png
+!apple-touch-icon.png

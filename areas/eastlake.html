@@ -11,6 +11,10 @@
 <meta property="og:description" content="Professional mobile car detailing in Eastlake, Chula Vista. We come to you. Book your appointment with SD Shine Lab today.">
 <meta property="og:url" content="https://sdshinelab.com/areas/eastlake.html">
 <meta property="og:type" content="website">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -64,6 +68,14 @@ section{padding:80px 2rem}
 footer{background:rgba(41,181,213,.04);border-top:1px solid rgba(41,181,213,.1);padding:3rem 2rem;text-align:center}
 footer p{color:#b0b0b0;font-size:.9rem;margin-bottom:.5rem}
 footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{background:rgba(255,255,255,.025);border:1px solid rgba(41,181,213,.12);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-item[open]{background:rgba(41,181,213,.04);border-color:rgba(41,181,213,.3)}
+.faq-item summary{padding:16px 20px;font-family:'Rajdhani',sans-serif;font-size:1.05rem;font-weight:600;color:#fff;cursor:pointer;list-style:none;position:relative;padding-right:46px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);color:#29b5d5;font-size:1.5rem;line-height:1}
+.faq-item[open] summary::after{content:'\2013'}
+.faq-item .faq-answer{padding:0 20px 16px;color:#b0b0b0;font-size:.95rem;line-height:1.6}
 @media(max-width:768px){
   .nav-links{position:fixed;top:70px;left:0;width:100%;background:rgba(0,0,0,.97);flex-direction:column;padding:2rem;gap:1.2rem;transform:translateY(-120%);transition:transform .3s;border-bottom:1px solid rgba(41,181,213,.15)}
   .nav-links.open{transform:translateY(0)}
@@ -76,7 +88,7 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
 <body>
 
 <nav>
-  <a href="../index.html" class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab – Mobile Auto Detailing"></a>
+  <a href="../index.html" class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab – Mobile Auto Detailing" width="1600" height="1600" loading="lazy"></a>
   <div class="nav-links" id="navLinks">
     <a href="../index.html">Home</a>
     <a href="../index.html#services">Services</a>
@@ -175,6 +187,30 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
   </div>
 </section>
 
+<section>
+  <div class="container">
+    <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Do you come to every neighborhood in Eastlake?</summary>
+        <div class="faq-answer">Yes &mdash; we serve every part of Eastlake. Just enter your address when booking and we'll confirm.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How long does a mobile detail take in Eastlake?</summary>
+        <div class="faq-answer">Most appointments run 1.5&ndash;3 hours depending on the package. We work in your driveway, so there's no need to wait at a shop.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to be home during the appointment?</summary>
+        <div class="faq-answer">Not necessarily. As long as we have access to the vehicle and a place to park, you can leave the keys with us and go about your day.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What if I need to reschedule?</summary>
+        <div class="faq-answer">No problem &mdash; just give us 24 hours notice and we'll move you to the next available slot at no charge.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-section">
   <div class="container">
     <h2 class="section-title">Ready for a <span class="accent">Spotless Ride</span>?</h2>
@@ -185,9 +221,10 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
 </section>
 
 <footer>
-  <div class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab"></div>
+  <div class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab" width="1600" height="1600" loading="lazy"></div>
   <p>&copy; 2026 SD Shine Lab. All rights reserved.</p>
   <p>Mobile Auto Detailing &bull; Chula Vista, CA 91910</p>
+  <p>Mon &ndash; Sat: 8:00 AM &ndash; 6:00 PM &bull; Sun: By Appointment</p>
   <p><a href="tel:+18557824886">(855) 782-4886</a></p>
 </footer>
 
@@ -197,7 +234,7 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
   "@type": "LocalBusiness",
   "name": "SD Shine Lab",
   "description": "Professional mobile auto detailing service in Eastlake, Chula Vista, CA",
-  "telephone": "+1-855-782-4886",
+  "telephone": "+18557824886",
   "url": "https://sdshinelab.com",
   "address": {
     "@type": "PostalAddress",
@@ -215,8 +252,28 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
     }
   },
   "priceRange": "$70-$150",
-  "openingHours": "Mo-Su 07:00-19:00",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
   "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Do you come to every neighborhood in Eastlake?","acceptedAnswer":{"@type":"Answer","text":"Yes — we serve every part of Eastlake. Just enter your address when booking and we'll confirm."}},
+    {"@type":"Question","name":"How long does a mobile detail take in Eastlake?","acceptedAnswer":{"@type":"Answer","text":"Most appointments run 1.5–3 hours depending on the package. We work in your driveway, so there's no need to wait at a shop."}},
+    {"@type":"Question","name":"Do I need to be home during the appointment?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. As long as we have access to the vehicle and a place to park, you can leave the keys with us and go about your day."}},
+    {"@type":"Question","name":"What if I need to reschedule?","acceptedAnswer":{"@type":"Answer","text":"No problem — just give us 24 hours notice and we'll move you to the next available slot at no charge."}}
+  ]
 }
 </script>
 
