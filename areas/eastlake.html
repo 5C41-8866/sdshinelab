@@ -83,9 +83,44 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
   .hero{padding:120px 1.5rem 60px}
   section{padding:60px 1.5rem}
 }
+
+.offer-banner{background:linear-gradient(90deg,rgba(41,181,213,.18),rgba(41,181,213,.08));border-bottom:1px solid rgba(41,181,213,.4);position:fixed;top:0;left:0;right:0;z-index:1001;font-family:'Outfit',sans-serif}
+.offer-banner.hidden{display:none}
+.offer-banner-inner{max-width:1200px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;justify-content:center;gap:16px;position:relative}
+.offer-banner-text{color:#e0e0e0;font-size:.92rem;text-align:center}
+.offer-banner-text strong{color:#fff}
+.offer-amount{color:#29b5d5;font-weight:600}
+.offer-banner-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#b0b0b0;font-size:1.4rem;line-height:1;cursor:pointer;padding:4px 8px}
+.offer-banner-close:hover{color:#29b5d5}
+@media(max-width:600px){.offer-banner-text{font-size:.82rem;padding-right:28px}}
+body.has-banner .nav,body.has-banner nav{top:38px}
+body.has-banner{padding-top:38px}
+@media(max-width:600px){body.has-banner{padding-top:52px}body.has-banner .nav,body.has-banner nav{top:52px}}
+.mobile-cta-bar{display:none}
+@media(max-width:768px){
+  .mobile-cta-bar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;bottom:0;left:0;right:0;background:rgba(0,0,0,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(41,181,213,.3);z-index:999;padding-bottom:env(safe-area-inset-bottom)}
+  .mcb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:12px 4px;color:#e0e0e0;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;transition:background .2s,color .2s;border-right:1px solid rgba(41,181,213,.15)}
+  .mcb-btn:last-child{border-right:none}
+  .mcb-btn svg{width:22px;height:22px}
+  .mcb-btn:active{background:rgba(41,181,213,.12)}
+  .mcb-book{color:#29b5d5}
+  .mcb-book svg{color:#29b5d5}
+  body{padding-bottom:76px}
+}
+.footer-sms{font-family:'Outfit',sans-serif;color:#b0b0b0;transition:color .2s}
+.footer-sms:hover{color:#29b5d5}
 </style>
 </head>
 <body>
+
+<div class="offer-banner" id="offerBanner" role="region" aria-label="Special offer">
+  <div class="offer-banner-inner">
+    <span class="offer-banner-text">
+      <strong>First time?</strong> Get <span class="offer-amount">$15 off</span> your first detail &mdash; mention this banner when booking.
+    </span>
+    <button class="offer-banner-close" id="offerBannerClose" aria-label="Dismiss offer">&times;</button>
+  </div>
+</div>
 
 <nav>
   <a href="../index.html" class="nav-logo"><img src="../gallery-imgs/logo.jpg" alt="SD Shine Lab – Mobile Auto Detailing" width="1600" height="1600" loading="lazy"></a>
@@ -226,6 +261,7 @@ footer .nav-logo img{height:45px;width:auto;margin-bottom:.8rem}
   <p>Mobile Auto Detailing &bull; Chula Vista, CA 91910</p>
   <p>Mon &ndash; Sat: 8:00 AM &ndash; 6:00 PM &bull; Sun: By Appointment</p>
   <p><a href="tel:+18557824886">(855) 782-4886</a></p>
+  <p><a href="sms:+18557824886?&body=Hi%20SD%20Shine%20Lab%20-%20I%27m%20interested%20in%20a%20mobile%20detail.%20" class="footer-sms">Text us for a quick quote</a></p>
 </footer>
 
 <script type="application/ld+json">
@@ -282,6 +318,49 @@ const hamburger=document.getElementById('hamburger');
 const navLinks=document.getElementById('navLinks');
 hamburger.addEventListener('click',()=>{navLinks.classList.toggle('open');});
 document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>{navLinks.classList.remove('open');}));
+(function(){
+  var KEY = 'sdsl_offer_dismissed_v1';
+  var banner = document.getElementById('offerBanner');
+  var closeBtn = document.getElementById('offerBannerClose');
+  if (!banner || !closeBtn) return;
+  try {
+    if (localStorage.getItem(KEY) === '1') {
+      banner.classList.add('hidden');
+    } else {
+      document.body.classList.add('has-banner');
+    }
+  } catch(e) {
+    document.body.classList.add('has-banner');
+  }
+  closeBtn.addEventListener('click', function(){
+    banner.classList.add('hidden');
+    document.body.classList.remove('has-banner');
+    try { localStorage.setItem(KEY, '1'); } catch(e) {}
+  });
+})();
 </script>
+<div class="mobile-cta-bar" role="navigation" aria-label="Quick contact">
+  <a href="tel:+18557824886" class="mcb-btn mcb-call" aria-label="Call SD Shine Lab">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Call</span>
+  </a>
+  <a href="sms:+18557824886?&body=Hi%20SD%20Shine%20Lab%20-%20I%27m%20interested%20in%20a%20mobile%20detail.%20" class="mcb-btn mcb-text" aria-label="Text SD Shine Lab">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Text</span>
+  </a>
+  <a href="https://pocketsuite.io/link/sdshinelab" class="mcb-btn mcb-book" aria-label="Book online">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+      <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span>Book</span>
+  </a>
+</div>
 </body>
 </html>
